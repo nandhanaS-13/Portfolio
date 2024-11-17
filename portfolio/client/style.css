@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.backg{
+    background-color: black;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+h1{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
+}
+.text-color-dark {
+    color: rgb(197, 23, 23);
+}
+.text-color-light {
+    color: white;
+}
+.my-color{
+    color: rgb(107, 176, 203);
+}
+.animate {
+	animation:animate 1s cubic-bezier(0.2, 0.6, 0.2, 1);
+	animation-fill-mode:backwards;
+}
+.two{
+    animation-delay: 0.6s;
+}
+.one{
+    animation-delay: 0.3s;
+}
+.img-scale{
+    animation: img-scale 2.5s cubic-bezier(0.2, 0.6, 0.2, 1);
+    animation-fill-mode: backwards;
+}
+@keyframes img-scale {
+    0%{
+        transform: scale(1.1);
+    }
+    100%{
+       transform: scale(1);
+    }
+}
+@keyframes animate {
+    0% {
+        opacity: 0;-webkit-transform: translateY(100%);
+    }
+	100% {
+        opacity: 1;-webkit-transform: translateY(0%);
+    }	
+}
+
+/* --------------------------cads link---------------------- */
+.link-pos > a{
+    position: fixed;
+    top: 15%;
+    right:100px;
+    color: white;
+    font-size: 2rem;
+    text-decoration: overline;
+}
+
+/* -----------------Index page---------------------- */
+.img-and-cnt{
+    display: flex;
+    gap: 4%;
+    flex-wrap: wrap-reverse;
+    justify-content:center;
+    align-content: center;
+    align-items: center;
+    margin-top: 5vh;
+}
+.mobile-view{
+    margin-top: 7%;
+    font-size: 2vh;
+    display: flex;
+    gap: 7%;
+    justify-content: center;
+    align-content: center;
+} 
+.column-content{
+    min-width: 4em;
+    display: flex;
+    flex-direction: column;
+}
+.img-scale{
+    min-width: 15vw;
+    max-width: 45vw;
+    min-height: 15vw;
+    max-height: 45vh;
+    /* width: 30%;
+    height: auto; */
+    border-radius: 50%;
+}
+.cont-details > h1{
+    font-size: 8vw;
+    line-height: 8vw;
+}
+
+/*---------------------------- About Page------------------------- */
+.abt-content{
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    font-weight: lighter;
+    line-height: 1.7em;
+    margin: 5% 15%;
+}
+.head-pos-abtpage {
+    font-size: 3rem;
+    margin: 10% 15% 5% 15%;
+    height: fit-content;
+}
+
+/*----------------- Skills Page--------------------- */
+.skill-cnt-pos{
+    font-size: 1.3rem;
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+}
+/*-------------------contact page-------------------- */
+.contact-cnt{
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    line-height: 1.7em;
+    margin: 5% 15% ;
+}
+.head-contact{
+    font-size: 3rem;
+    margin: 10% 15% 5% 15%;
+    height: fit-content;
+}
+.icon-border{
+    outline: 2px solid white;
+    outline-offset: 0.6rem;
+    border-radius: 50%;
+}
+.trans{
+     display: inline;margin-left: 2rem;
+}
+.trans a{
+    color: white;
+}
+.trans:hover{
+    margin-left: 1em;
+    transition: all 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+/*------------------- Media queries------------------------- */
+@media screen and (min-width: 1000px) {
+  .mobile-view {
+    display: none;
+  }
+}
+@media screen and (max-width: 800px) {
+  .cont-details>h1{
+      font-size: 6vh;
+      line-height: 1;
+  }
+  .img-scale{
+        margin: 10%;
+      width: 80%;
+      height: auto;
+  }
+  .link-pos{
+      display: none;
+  }
+  .abt-content{
+      font-size: 1.2rem;
+  }
+  .head-pos-abtpage ,.head-contact{
+        font-size: 2rem;
+  }
+  .trans{
+    font-size: 1rem;
+    margin-left: 1rem;
+  }
+  .contact-cnt,.head-contact{
+    margin: 5% 10%;
+  }	
+}
+
+/*---------------------- intro page hover states--------------------- */
+.hover-text-change-abt::after{
+    content: "Hello.";
+}
+.hover-text-change-abt:hover::after{
+    content: "About";
+    margin-left: 0.4em;
+    transition: all 0.8s cubic-bezier(0.2, 0.6, 0.2, 1);	
+}
+.hover-text-change-skill::after{
+    content: "I'm";
+}
+.hover-text-change-skill:hover::after{
+    content: "Work";
+    margin-left: 0.4em;
+    transition: all 0.8s cubic-bezier(0.2, 0.6, 0.2, 1);	
+}
+.hover-text-change-contact::after{
+    content: "Nandhana";
+}
+.hover-text-change-contact:hover::after{
+    content: "Contact";
+    margin-left: 0.5em;
+    transition: all 0.8s cubic-bezier(0.2, 0.6, 0.2, 1);	
+}
+
